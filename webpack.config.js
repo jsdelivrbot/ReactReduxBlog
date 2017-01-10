@@ -3,9 +3,9 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: __dirname,
+    path: __dirname + '/public',
     publicPath: '/',
-    filename: 'public/bundle.js'
+    filename: 'bundle.js'
   },
   resolve: {
     root: __dirname,
@@ -24,6 +24,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
+    inline: true,
     historyApiFallback: true,
     contentBase: './public'
   }
