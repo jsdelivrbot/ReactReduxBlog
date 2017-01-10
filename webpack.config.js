@@ -7,6 +7,10 @@ module.exports = {
     publicPath: '/',
     filename: 'public/bundle.js'
   },
+  resolve: {
+    root: __dirname,
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [{
       exclude: /node_modules/,
@@ -21,6 +25,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './public'
   }
 };
